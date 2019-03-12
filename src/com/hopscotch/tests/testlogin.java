@@ -1,6 +1,7 @@
 package com.hopscotch.tests;
 
 
+import org.testng.Reporter;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 
@@ -11,12 +12,16 @@ import com.hopscotch.page.testloginpage;
 public class testlogin extends basetest {
 
 	@DataProvider
-	public Object[][] getdata()
+	public Object[][] getdata1()
 	{
 		return new Object[][]{{" "," "},{"","geius"},{"imtinu@gmail.com",""},{"imtinu@gmail.com","geniuss"},{"im  tinu@gmail.com","genius"},{"immihu@gmail.com","genius"},{"imtinu@gmail.com","genius"}};
 	}
-	
-	@Test(dataProvider="getdata")
+	@Test
+	public void testmy()
+	{
+		Reporter.log("modified method",true);
+	}
+	@Test(dataProvider="getdata1")
 	public void loginsuccess(String user,String pwd) throws InterruptedException
 	{		
 		testloginpage t=new testloginpage(driver);
