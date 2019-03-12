@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="Test">
+    <classes>
+      <class name="com.hopscotch.tests.testlogin"/>
+    </classes>
+  </test> <!-- Test -->
+  <test name="Test(failed)">
+    <classes>
+      <class name="com.hopscotch.tests.testlogin">
+        <methods>
+          <include name="postcondition"/>
+          <include name="loginsuccess" invocation-numbers="0 1 2 3 4 5 6"/>
+          <include name="precondition"/>
+        </methods>
+      </class> <!-- com.hopscotch.tests.testlogin -->
+    </classes>
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->
